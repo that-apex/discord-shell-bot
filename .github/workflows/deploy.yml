@@ -1,4 +1,4 @@
-name: Deploy shell-bot
+name: Deploy to GKE
 
 on:
   workflow_dispatch:
@@ -41,7 +41,7 @@ jobs:
       - name: Build docker image
         run: >
           gcloud builds submit .
-          --tag 
+          --tag ${{ env.IMAGE_NAME }}
 
       - name: Deploy to GKE
         run: kubectl apply -f deployment.yml
