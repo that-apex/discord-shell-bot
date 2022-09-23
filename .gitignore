@@ -1,0 +1,4 @@
+.idea
+.gradle
+build/
+infrastructure/.terraform
