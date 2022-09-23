@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shell-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shell-bot
+  template:
+    metadata:
+      labels:
+        app: shell-bot
+    spec:
+      containers:
+        - name: shell-bot
+          image: europe-west3-docker.pkg.dev/discord-shell-bot/shell-bot/shell-bot
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "100m"
+          env:
+            - name: SHELLBOT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: shell-bot
+                  key: token
