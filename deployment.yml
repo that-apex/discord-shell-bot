@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: shell-bot
-          image: europe-west3-docker.pkg.dev/discord-shell-bot/shell-bot/shell-bot
+          image: europe-west3-docker.pkg.dev/discord-shell-bot/shell-bot/shell-bot:latest
+          imagePullPolicy: Always
           resources:
             requests:
               memory: "512Mi"
