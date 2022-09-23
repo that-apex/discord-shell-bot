@@ -20,7 +20,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: 'Terraform Init'
-        run: cd infrastracture && terraform init
+        run: cd infrastructure && terraform init
 
       - name: 'Terraform Apply'
-        run: cd infrastracture && terraform apply -auto-approve
+        run: cd infrastructure && terraform apply -auto-approve
