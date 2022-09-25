@@ -51,7 +51,7 @@ class JSchShell(private val channel: ChannelShell) : SSHShell {
 
     override fun close() {
         stdin.close()
-        stdin.close()
+        stdout.close()
         stderr.close()
 
         if (!channel.isClosed)
