@@ -2,7 +2,6 @@ package net.thatapex.shellbot.discord.commands
 
 import dev.kord.core.behavior.interaction.response.respond
 import dev.kord.core.entity.interaction.SubCommand
-import dev.kord.rest.builder.interaction.int
 import dev.kord.rest.builder.interaction.subCommand
 import net.thatapex.shellbot.discord.DiscordBot
 import net.thatapex.shellbot.discord.Reactions
