@@ -53,9 +53,7 @@ class DiscordBot(
 
             logger.info { "${message.author?.id} executed ${message.content}" }
 
-            if (!shellManager.executeShellCommand(message.content)) {
-                message.reply { content = "No active shell session. Use /ssh to create a new one" }
-            }
+            shellManager.executeShellCommand(message.content)
         }
 
         kord.login {
