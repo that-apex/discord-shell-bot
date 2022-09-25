@@ -70,7 +70,7 @@ class ShellManager(
                 remaining = remaining.substring(endIndex, remaining.length)
 
                 channel.createMessage {
-                    content = "$PREFIX$data$SUFFIX`"
+                    content = "$PREFIX$data$SUFFIX"
                 }
             }
         }

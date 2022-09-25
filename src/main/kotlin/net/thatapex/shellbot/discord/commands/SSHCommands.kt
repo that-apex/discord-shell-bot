@@ -8,7 +8,7 @@ suspend fun DiscordBot.registerSSHCommands() {
     registerSlashCommand(
         name = "ssh",
         description = "Connect to SSH",
-        unrestricted = false,
+        unrestricted = true,
     ) {
         handler {
             val response = interaction.deferPublicResponse()
